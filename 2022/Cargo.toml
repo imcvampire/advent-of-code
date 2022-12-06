@@ -1,0 +1,7 @@
+[workspace]
+members = ["day1", "day2a"]
+
+[workspace.dependencies]
+color-eyre = "0.6.2"
+fs-err = "2.9.0"
+itertools = "0.10.5"
