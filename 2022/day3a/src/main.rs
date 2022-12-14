@@ -43,7 +43,7 @@ fn main() -> color_eyre::Result<()> {
                 .collect::<Result<HashSet<_>, _>>()?;
             itertools::process_results(second.bytes().map(Item::try_from), |mut it| {
                 it.find(|&item| first_items.contains(&item))
-                    .map(|item| dbg!(item.score()))
+                    .map(|item| item.score())
                     .ok_or_else(|| color_eyre::eyre::eyre!("compartments have no items in common"))
             })?
         })
