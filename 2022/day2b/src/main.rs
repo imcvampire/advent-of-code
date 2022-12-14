@@ -110,6 +110,7 @@ struct Round {
     theirs: Move,
     ours: Move,
 }
+
 impl FromStr for Round {
     type Err = color_eyre::Report;
 
